@@ -13,9 +13,12 @@
 		00BE7EE11FB4BFB500137E5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00BE7EE01FB4BFB500137E5C /* Assets.xcassets */; };
 		00BE7EE41FB4BFB500137E5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00BE7EE21FB4BFB500137E5C /* LaunchScreen.storyboard */; };
 		00BE7EE71FB4BFB500137E5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE7EE61FB4BFB500137E5C /* main.m */; };
+		00FB159B1FB5C91600CBADC2 /* ApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB159A1FB5C91600CBADC2 /* ApiHandler.m */; };
+		00FB15A41FB5D31700CBADC2 /* ScannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB15A31FB5D31700CBADC2 /* ScannerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00189EE91FB5B6AA00A2C2EB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		00BE7ED41FB4BFB500137E5C /* BarCodeReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00BE7ED71FB4BFB500137E5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00BE7ED81FB4BFB500137E5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,10 @@
 		00BE7EE31FB4BFB500137E5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00BE7EE51FB4BFB500137E5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00BE7EE61FB4BFB500137E5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00FB15991FB5C91600CBADC2 /* ApiHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiHandler.h; sourceTree = "<group>"; };
+		00FB159A1FB5C91600CBADC2 /* ApiHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiHandler.m; sourceTree = "<group>"; };
+		00FB15A21FB5D31700CBADC2 /* ScannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerVC.h; sourceTree = "<group>"; };
+		00FB15A31FB5D31700CBADC2 /* ScannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +67,44 @@
 			children = (
 				00BE7ED71FB4BFB500137E5C /* AppDelegate.h */,
 				00BE7ED81FB4BFB500137E5C /* AppDelegate.m */,
-				00BE7EDA1FB4BFB500137E5C /* ViewController.h */,
-				00BE7EDB1FB4BFB500137E5C /* ViewController.m */,
-				00BE7EDD1FB4BFB500137E5C /* Main.storyboard */,
+				00FB15A51FB5F30000CBADC2 /* Model */,
+				00FB15A61FB5F30A00CBADC2 /* View */,
+				00FB15A71FB5F31800CBADC2 /* Controller */,
 				00BE7EE01FB4BFB500137E5C /* Assets.xcassets */,
 				00BE7EE21FB4BFB500137E5C /* LaunchScreen.storyboard */,
 				00BE7EE51FB4BFB500137E5C /* Info.plist */,
 				00BE7EE61FB4BFB500137E5C /* main.m */,
 			);
 			path = BarCodeReader;
+			sourceTree = "<group>";
+		};
+		00FB15A51FB5F30000CBADC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00189EE91FB5B6AA00A2C2EB /* Constants.h */,
+				00FB15991FB5C91600CBADC2 /* ApiHandler.h */,
+				00FB159A1FB5C91600CBADC2 /* ApiHandler.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00FB15A61FB5F30A00CBADC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00BE7EDD1FB4BFB500137E5C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00FB15A71FB5F31800CBADC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00BE7EDA1FB4BFB500137E5C /* ViewController.h */,
+				00BE7EDB1FB4BFB500137E5C /* ViewController.m */,
+				00FB15A21FB5D31700CBADC2 /* ScannerVC.h */,
+				00FB15A31FB5D31700CBADC2 /* ScannerVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FB159B1FB5C91600CBADC2 /* ApiHandler.m in Sources */,
 				00BE7EDC1FB4BFB500137E5C /* ViewController.m in Sources */,
+				00FB15A41FB5D31700CBADC2 /* ScannerVC.m in Sources */,
 				00BE7EE71FB4BFB500137E5C /* main.m in Sources */,
 				00BE7ED91FB4BFB500137E5C /* AppDelegate.m in Sources */,
 			);
@@ -281,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GNF787574;
 				INFOPLIST_FILE = BarCodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fiendishcorporation.BarCodeReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9GNF787574;
 				INFOPLIST_FILE = BarCodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fiendishcorporation.BarCodeReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

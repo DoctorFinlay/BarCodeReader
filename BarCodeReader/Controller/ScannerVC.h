@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ScannerVC.h
 //  BarCodeReader
 //
 //  Created by Iain Coleman on 10/11/2017.
@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "ApiHandler.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ScannerVC : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 
 @end
-
