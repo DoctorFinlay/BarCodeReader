@@ -79,6 +79,15 @@
                                             </fragment>
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <attributedString key="attributedText">
+                                                <fragment content="Waiting for barcode...">
+                                                    <attributes>
+                                                        <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </variation>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12428876010000001" green="0.59459054469999995" blue="0.91747468710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
