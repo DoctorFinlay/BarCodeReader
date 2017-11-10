@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,17 +22,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Code Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4F-pv-8ik">
-                                <rect key="frame" x="71.5" y="137" width="233" height="35"/>
+                                <rect key="frame" x="300.5" y="204" width="233" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er8-2A-r0U">
-                                <rect key="frame" x="70.5" y="182" width="233" height="50"/>
+                                <rect key="frame" x="300.5" y="249" width="233" height="50"/>
                                 <color key="backgroundColor" red="0.12428876010000001" green="0.59459054469999995" blue="0.91747468710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aiP-GE-h1p"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLY-1J-VGF">
-                                <rect key="frame" x="70.5" y="282" width="233" height="50"/>
+                                <rect key="frame" x="300.5" y="349" width="233" height="50"/>
                                 <color key="backgroundColor" red="0.12428876010000001" green="0.59459054469999995" blue="0.91747468710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Go!">
@@ -60,16 +60,16 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 13 digit barcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHy-SX-CBO">
-                                <rect key="frame" x="75" y="242" width="225" height="30"/>
+                                <rect key="frame" x="167" y="309" width="500" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZY-gN-XhG">
-                                <rect key="frame" x="37" y="342" width="300" height="315"/>
+                                <rect key="frame" x="83.5" y="409" width="667" height="693"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7AL-tf-ZEL">
-                                        <rect key="frame" x="8" y="8" width="284" height="299"/>
+                                        <rect key="frame" x="8" y="8" width="651" height="677"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Waiting for barcode...">
@@ -90,13 +90,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcode must be 13 digits long" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhK-9e-FJL">
-                                <rect key="frame" x="-0.5" y="282" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="349" width="834" height="50"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanner" translatesAutoresizingMaskIntoConstraints="NO" id="MTf-Za-pSW">
-                                <rect key="frame" x="139" y="30" width="97" height="97"/>
+                                <rect key="frame" x="335" y="30" width="164" height="164"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MTf-Za-pSW" secondAttribute="height" multiplier="1:1" id="BbN-XG-qhG"/>
                                 </constraints>
@@ -150,11 +150,11 @@
             <objects>
                 <viewController id="2C6-uD-W08" customClass="ScannerVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="or2-nH-6Nd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEq-Po-8vl">
-                                <rect key="frame" x="-0.5" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-si-4Aa">
                                         <rect key="frame" x="10" y="23" width="39" height="32"/>
@@ -167,7 +167,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan a barcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-13-uLu">
-                                        <rect key="frame" x="110" y="23" width="155.5" height="32"/>
+                                        <rect key="frame" x="339.5" y="23" width="155.5" height="32"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -185,11 +185,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZW-25-fd8">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="60" width="834" height="1052"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraTarget" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-2A-vsP">
-                                <rect key="frame" x="75" y="251" width="225" height="225"/>
+                                <rect key="frame" x="167" y="336" width="500" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4K0-2A-vsP" secondAttribute="height" multiplier="1:1" id="5jV-3K-wJK"/>
                                 </constraints>
@@ -199,14 +199,15 @@
                         <constraints>
                             <constraint firstItem="4K0-2A-vsP" firstAttribute="centerY" secondItem="uZW-25-fd8" secondAttribute="centerY" id="5lt-3S-Uxd"/>
                             <constraint firstItem="ZEq-Po-8vl" firstAttribute="centerX" secondItem="or2-nH-6Nd" secondAttribute="centerX" id="7B8-3J-C45"/>
-                            <constraint firstItem="uZW-25-fd8" firstAttribute="width" secondItem="PCb-DE-Nq2" secondAttribute="width" id="EYr-x3-KdR"/>
                             <constraint firstItem="PCb-DE-Nq2" firstAttribute="centerX" secondItem="uZW-25-fd8" secondAttribute="centerX" id="Hfx-cF-Dgt"/>
                             <constraint firstItem="ZEq-Po-8vl" firstAttribute="width" secondItem="or2-nH-6Nd" secondAttribute="width" id="IqU-5z-qOo"/>
                             <constraint firstItem="4K0-2A-vsP" firstAttribute="width" secondItem="uZW-25-fd8" secondAttribute="width" multiplier="0.6" id="MOt-bd-jJU"/>
                             <constraint firstItem="4K0-2A-vsP" firstAttribute="centerX" secondItem="uZW-25-fd8" secondAttribute="centerX" id="Vte-Nm-rwD"/>
                             <constraint firstItem="uZW-25-fd8" firstAttribute="bottom" secondItem="PCb-DE-Nq2" secondAttribute="bottom" id="YVe-Lb-MRH"/>
+                            <constraint firstItem="uZW-25-fd8" firstAttribute="leading" secondItem="PCb-DE-Nq2" secondAttribute="leading" id="d4g-8v-X4D"/>
                             <constraint firstItem="uZW-25-fd8" firstAttribute="top" secondItem="ZEq-Po-8vl" secondAttribute="bottom" id="glI-yC-G2x"/>
                             <constraint firstItem="ZEq-Po-8vl" firstAttribute="top" secondItem="or2-nH-6Nd" secondAttribute="top" id="h6n-AB-KTK"/>
+                            <constraint firstItem="uZW-25-fd8" firstAttribute="trailing" secondItem="PCb-DE-Nq2" secondAttribute="trailing" id="w7d-ZW-W4P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PCb-DE-Nq2"/>
                     </view>
