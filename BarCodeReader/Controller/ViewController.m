@@ -13,7 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UILabel *warningLabel;
-@property (weak, nonatomic) IBOutlet UITextView *resultsTextView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *brandLabel;
+@property (weak, nonatomic) IBOutlet UILabel *upcLabel;
 
 @end
 
@@ -24,7 +26,10 @@
 @synthesize goButton;
 @synthesize scanButton;
 @synthesize warningLabel;
-@synthesize resultsTextView;
+@synthesize nameLabel;
+@synthesize brandLabel;
+@synthesize upcLabel;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,8 +57,11 @@
     [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
     manualEntryTextField.inputAccessoryView = keyboardDoneButtonView;
     
-    //Set up observer for the returned data from ApiHandler
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTextField:) name:BARCODE_RESPONSE object:nil];
+    //Set up observers for the returned data from ApiHandler
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTitleLabel:) name:BARCODE_RESPONSE_TITLE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateBrandLabel:) name:BARCODE_RESPONSE_BRAND object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUPCLabel:) name:BARCODE_RESPONSE_UPC object:nil];
+
     
 }
 
@@ -113,8 +121,17 @@
 
 
 
--(void)updateTextField:(NSNotification*)note {
-    resultsTextView.text = (NSString*)note.object;
+-(void)updateTitleLabel:(NSNotification*)string {
+    //resultsTextView.text = (NSString*)string.object;
+    nameLabel.text = (NSString*)string.object;
+}
+
+-(void)updateBrandLabel:(NSNotification*)string {
+    brandLabel.text = (NSString*)string.object;
+}
+
+-(void)updateUPCLabel:(NSNotification*)string {
+    upcLabel.text = (NSString*)string.object;
 }
 
 

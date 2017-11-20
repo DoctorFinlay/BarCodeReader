@@ -56,29 +56,35 @@
                                                                  
                                                                  NSDictionary *items = jSONDictionary[ITEMS][0];
                                                                  
-                                                                 NSMutableString *itemString = [NSMutableString new];
+                                                                 NSMutableString *itemTitle = [NSMutableString new];
+                                                                 NSMutableString *itemBrand = [NSMutableString new];
+                                                                 NSMutableString *itemUPC = [NSMutableString new];
                                                                  
                                                                  if (items[TITLE] != nil) {
-                                                                     [itemString appendFormat:@"Title: %@\n", items[TITLE]];
+                                                                     [itemTitle appendFormat:@"Title: %@\n", items[TITLE]];
                                                                  } else {
-                                                                     [itemString appendFormat:@"Title: Not given\n"];
+                                                                     [itemTitle appendFormat:@"Title: Not given\n"];
                                                                  }
                                                                  
                                                                  if (items[BRAND] != nil) {
-                                                                     [itemString appendFormat:@"Brand: %@\n", items[BRAND]];
+                                                                     [itemBrand appendFormat:@"Brand: %@\n", items[BRAND]];
                                                                  } else {
-                                                                     [itemString appendFormat:@"Brand: Not given\n"];
+                                                                     [itemBrand appendFormat:@"Brand: Not given\n"];
                                                                  }
                                                                  
                                                                  if (items[UPC] != nil) {
-                                                                     [itemString appendFormat:@"UPC: %@\n", items[UPC]];
+                                                                     [itemUPC appendFormat:@"UPC: %@\n", items[UPC]];
                                                                  } else {
-                                                                     [itemString appendFormat:@"UPC: Not given\n"];
+                                                                     [itemUPC appendFormat:@"UPC: Not given\n"];
                                                                  }
-                                                                 NSLog(@"Item String: %@", itemString);
-                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE object:itemString userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_TITLE object:itemTitle userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_BRAND object:itemBrand userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_UPC object:itemUPC userInfo:nil];
+
                                                              } else {
-                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE object:@"An error occured" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_TITLE object:@"An error occured" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_BRAND object:@"N/A" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_UPC object:@"N/A" userInfo:nil];
                                                              }
                                                          } else {
                                                              if (data) { //Parse error response
@@ -86,11 +92,17 @@
                                                                  
                                                                  NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&parseError];
                                                                  
-                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE object:dictionary[MESSAGE] userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_TITLE object:dictionary[MESSAGE] userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_BRAND object:@"N/A" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_UPC object:@"N/A" userInfo:nil];
+
+                                                                 
                                                              } else {
                                                                  NSLog(@"Error %li",(long)statusCode);
                                                                  
-                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE object:@"An error occured" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_TITLE object:@"An error occured" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_BRAND object:@"N/A" userInfo:nil];
+                                                                 [[NSNotificationCenter defaultCenter] postNotificationName:BARCODE_RESPONSE_UPC object:@"N/A" userInfo:nil];
                                                              }
                                                          }
                                                          

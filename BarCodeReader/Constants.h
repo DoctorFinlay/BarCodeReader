@@ -11,7 +11,9 @@
 
 
 // Notification Center
-#define BARCODE_RESPONSE @"BARCODE_RESPONSE"
+#define BARCODE_RESPONSE_TITLE @"barcodeResponseTitle"
+#define BARCODE_RESPONSE_BRAND @"barcodeResponseBrand"
+#define BARCODE_RESPONSE_UPC @"barcodeResponseUPC"
 
 
 //Constants for the API

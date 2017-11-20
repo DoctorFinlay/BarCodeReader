@@ -46,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006AFA301FC2B91500FF074D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				00FB15991FB5C91600CBADC2 /* ApiHandler.h */,
+				00FB159A1FB5C91600CBADC2 /* ApiHandler.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		00BE7ECB1FB4BFB500137E5C = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +74,8 @@
 		00BE7ED61FB4BFB500137E5C /* BarCodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				00189EE91FB5B6AA00A2C2EB /* Constants.h */,
+				006AFA301FC2B91500FF074D /* Services */,
 				00BE7ED71FB4BFB500137E5C /* AppDelegate.h */,
 				00BE7ED81FB4BFB500137E5C /* AppDelegate.m */,
 				00FB15A51FB5F30000CBADC2 /* Model */,
@@ -81,9 +92,6 @@
 		00FB15A51FB5F30000CBADC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				00189EE91FB5B6AA00A2C2EB /* Constants.h */,
-				00FB15991FB5C91600CBADC2 /* ApiHandler.h */,
-				00FB159A1FB5C91600CBADC2 /* ApiHandler.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
